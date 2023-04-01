@@ -53,7 +53,6 @@ function App() {
   const handleFilterSubmit = (e) => {
     e.preventDefault();
     if (!filters) return toast("Select Filters");
-    if (data.length === 0) return toast("Data not available");
     axios
       .post("http://localhost:5000/filter", filters)
       .then((response) => {
